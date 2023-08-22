@@ -1,0 +1,22 @@
+a)cd Downloads
+
+b)mkdir 'My New Folder' 'Another'
+
+c) (i)mkdir ./'My New Folder'/folders
+   (ii)touch ./'My New Folder'/folders/test1.txt
+   
+d)cp ./'My New Folder'/folders/test1.txt ./test2.txt 
+
+e) (i)mkdir ~/Documents/Folder_in_documents
+   (ii)mv ./'My New Folder'/folders/test1.txt ~/Documents/Folder_in_documents/
+
+f)mv ~/Documents/Folder_in_documents/test1.txt ~/Documents/Folder_in_documents/   
+    Newtest.txt
+
+g)sort test2.txt ~/Documents/Folder_in_documents/Newtest.txt | tac > Out1.txt
+
+h)find ~/Desktop/ -name "[a-zA-Z][a-zA-Z]*" -exec chmod a-x {} \;
+
+i)head -5 test2.txt | tail -4
+
+j)grep "^[0-9].*\|.*[0-9]$" ~/Documents/Folder_in_documents/Newtest.txt

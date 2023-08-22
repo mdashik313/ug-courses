@@ -1,0 +1,6 @@
+(1)command line argument/argument passing:
+------------------------------------------
+./file.sh <arg1> <arg2> <argN>
+
+(2) for loop
+(3) function

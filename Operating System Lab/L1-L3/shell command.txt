@@ -1,0 +1,155 @@
+#L-1
+-----------------
+
+shell command:
+ uname - unix name
+ whoami - user
+ ls -> list all directory and file. 
+ 		blue color identify directory
+ 		white color identify file
+ pwd -> print working directory
+ cd .. -> goto previous folder
+ touch file.txt -> create new file
+ mkdir folderName -> create new folder
+ 
+ *if a folder or file name contain space it is must to use single quot '' to use cd 'test file'
+ 
+ ~ -> /home/student 
+ ~ -> called Tilde
+ 
+ 
+ #L-2
+ -----------------
+1) Relative path:
+ 	starts with .(dot slash) means current directory
+ 	ex: cd ./trialFolder
+ 
+2) echo
+	echo hello world (prints hello world in terminal)
+	
+3) making directory/folder
+	mkdir folder_name
+	
+4) deleting folder
+	rmdir A B -> delets forder A,B
+	
+5)create file
+	touch fileName -> create file in current dir
+	
+  delete file
+  	rm <directory>
+6)remove folder with contents
+	rm -r folde_name -> here r means recursively
+
+7)copy paste move:
+	copy :cp file_name ~/Desktop  -> cp <file with dir> <destination dir> , in destination 
+	we can change the file name.
+	move: mv file2.txt ~/Desktop/folder1/ 
+	
+	*there is no rename command. so to rename a folder move it to same dir and set the new 		name
+
+8) ls -l -> list with permission and other detail
+	ls -S -> list sort by size	(descending)
+	ls -lh -> list with size readable by human(kb,mb)
+
+8.1) gives the maual of a command	
+	*** man <command_name> -> gives the maual of a command
+	
+9) cat (concat)
+	cat file1.txt file2.txt -> shows the contents of multiple files by concating
+	
+	*save the concated result
+		cat file1.txt file2.txt > result.txt  -> concat two file and save the result 
+												to result.txt but don't append.
+		cat file1.txt file2.txt >> result.txt  -> concat two file and save the result 
+												to result.txt and append(>> sign appends).
+	
+	* '<<' this sing take the contents of file to command
+		ls << result.txt
+	
+10) head tail
+	head -9 file.txt -> prints the first 9 lines from this file
+	til -9 file.txt  -> prints the last 9 lines from this file
+	
+	
+*** history >> L2commands.txt -> save the terminal history into a file
+	
+	
+	
+ #L-3
+ ---------------------------------------------------------------
+
+1)print from line 3-7 of a text file
+	(pipe) -> x | y (x's output as input to y)
+	command : head -7 | tail -5 (head prints first 7 line then taile thke these 7 line as 
+	input)
+	first take line 1-7 as head then take 3-7 as tail
+	
+	   ------------------->>>> CT 1 syllsbus <<<<<<<<<<<<<<<<<<
+
+2) create linux user
+	add user : useradd username
+	give password : passwd username
+	*) delete user : 
+
+3) create linux group
+	add group : groupadd groupname
+	delete grp : groupdel grpname
+	
+	*) add user to a group : useradd -g groupname username
+
+4) permission
+	rwx - read write execute
+	
+	- : file
+	d : directory
+	
+	3 type of security permission : 1.owner 2. group 3.all other
+	
+	cmd :  - rwx     rwx      rwx
+	      (owner) (group) (all other)
+	    rw- : execute permission not given
+	    r-- : writhe,execute not given
+	    --- : nothing given
+	*) i created a file (m.txt) so cmd : - rwx    --- ---
+								  (owner)  (other group member) (all other group)
+	
+	 u - user
+	 g - group
+	 o - all other
+	
+	giving write(w) permission to group(g) and others (o):
+	cmd : chmod go+w m.txt
+	
+	neumerical vlaue : r=4, w=2, x=1.  so rwx = 7, -wx=3, --x = 1
+	
+	*) change owner of a file : chown uername m.txt
+
+5)find
+	find -type f (file)
+	find -type d (directory)
+	
+	search in to a directory:
+		find /home/student/ -name "myfilename" -type f
+
+6)grep
+	grep pattern filename
+	grep -i patt filename (-i case insensitive)
+	grep -n patt filename (printt the reselt with line number)
+	grep -c patt ... (prints how many unique lines are matched)
+	grep -o patt filename (output the characters which is matched)
+	
+	*)grep with regular expressing:
+		grep -E "[0-9]" file (checks if exist one digit)
+		grep -E "[a-zA-Z][0-9]" file  (checks if only one letter then a digit)
+		grep -E "[a-zA-Z]{6} file ({} means 6 length)
+		
+		
+	
+	
+	
+	
+	
+	****CT 1 -> syl : without find,grep,user,group,permission
+	
+	

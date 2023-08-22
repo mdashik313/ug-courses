@@ -1,0 +1,14 @@
+new PriorityQueue<Process>(10, new
+            Comparator<Process>() {
+                public int compare(Process process1, Process process2) {
+                    if(process1.getPriority() < process2.getPriority()){
+                        return -1;
+                    }
+                    else if(process1.getPriority() > process2.getPriority()){
+                        return 1;
+                    }
+                    else {
+                        return (int)(process1.getArrivalTime()-process2.getArrivalTime());
+                    }
+                }
+            });

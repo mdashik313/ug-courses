@@ -1,0 +1,30 @@
+#need to give permission to execute the file : chmod +x script.sh
+#to remove bad interpreter error select "LF" on bottom of the editor
+
+#while declaring variable we can't use space around = (assignment operator) ex: my_var="this is a variable"
+
+#to write an expression(logic,math) : expr <space> a <space> + <space> b
+    to save the expression in a variable enclose the expression with back tick(`)
+    ex : my_expr = `expr 5 + 5`
+
+#to print dolar \$someText
+
+#read variable
+    (command)
+    echo "Enter a value "
+    read my_var
+    echo value of the variable : $my_var
+
+    *print a line without default newline : echo -n "Enter a number"
+    *while reading a variable : read -p "enter a number " my_var
+    *what is typing will not shown in terminal : read -s -p "enter a password " my_var
+
+    *store output of a command : see script.sh
+
+
+#how to run shel script:
+    1.file extension must be file.sh
+    2.starting of the file must be '#!/bin/bash'
+    3.need to provie execution permission
+    4.run -> ./file.sh
+
